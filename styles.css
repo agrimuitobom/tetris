@@ -6,6 +6,21 @@ body {
     background-color: #000;
 }
 
+#gameContainer {
+    position: relative; /* これにより、子要素の絶対配置を容易にする */
+    /* 他のスタイル */
+}
+
+.centered-text {
+    position: absolute;  /* 親要素に対して絶対的に配置 */
+    top: 50%;           /* 上部から50%の位置に配置 */
+    left: 50%;          /* 左側から50%の位置に配置 */
+    transform: translate(-50%, -50%); /* これにより、テキストが真ん中に配置される */
+    
+    font-size: 36px;
+    color: white;
+}
+
 canvas {
     border: 1px solid #fff;
 }
