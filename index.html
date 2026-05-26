@@ -1,18 +1,93 @@
 <!DOCTYPE html>
+<!-- =========================================================
+     index.html  ―― サイトの入口（トップページ）
+     👤 担当：構成リーダー（　　　　　　　　）さん
+
+     このページは「お店の入口」です。
+     ・上に大きな写真（ヒーロー）
+     ・下に作物カードを並べる
+     カードをクリックすると、各作物のページに移動します。
+     新しい作物を追加するときは、下の <a class="card"> ... </a> を
+     1つコピーして、リンク先・写真・名前を変えればOK。
+     ========================================================= -->
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
-<title>テトリスゲーム</title>
-</head>
-<body>
-<canvas id="game" width="300" height="600"></canvas>
-  <div id="gameContainer">
-    <!-- ゲームの他の要素 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="centered-text">ノダリス</div>
-</div>
-<script src="script.js"></script>
+  <!-- ✏️ ブラウザのタブに出る名前。学校・農場の名前に変えよう -->
+  <title>○○農業高校 直売所サイト</title>
+
+  <!-- 見た目を読み込む（さわらなくてOK） -->
+  <link rel="stylesheet" href="style.css">
+  <!-- フォント（さわらなくてOK） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ▼ 上の帯（全ページ共通）✏️ 農場名を変えよう -->
+  <header class="site-header">
+    <div class="farm-name">🌱 ○○農業高校 直売所</div>
+    <div class="farm-sub">わたしたちが育てた作物を紹介します</div>
+  </header>
+
+  <!-- ▼ ヒーロー（一番上の大きな写真）✏️ images/hero.jpg を自分たちの写真に -->
+  <section class="hero">
+    <img src="images/hero.jpg" alt="学校農場の写真">
+    <div class="hero-text">
+      <h1>畑から、まっすぐ。</h1>
+      <p>○年○組のみんなで育てました</p>
+    </div>
+  </section>
+
+  <!-- ▼ ここから作物の一覧 -->
+  <main class="container">
+    <h2 class="section-title">今日のおすすめ</h2>
+    <p class="lead">気になる作物をタップしてみてください</p>
+
+    <div class="card-grid">
+
+      <!-- ===== カード1：トマト（見本ページにリンク）===== -->
+      <a class="card" href="tomato.html">
+        <img src="images/tomato.jpg" alt="トマト">
+        <div class="card-body">
+          <span class="tag">完熟</span>
+          <h3>あま～いトマト</h3>
+          <p>朝もぎたて。生でガブッといけます。</p>
+        </div>
+      </a>
+
+      <!-- ===== カード2：あなたの作物（コピーして増やせる）===== -->
+      <!-- ✏️ href を作ったページ名に、img を写真に、文章を自分の言葉に -->
+      <a class="card" href="template-product.html">
+        <img src="images/photo.jpg" alt="作物の名前">
+        <div class="card-body">
+          <span class="tag">タグ</span>
+          <h3>作物の名前</h3>
+          <p>ひとことアピール（20文字くらい）</p>
+        </div>
+      </a>
+
+      <!-- ===== カード3：コピー用の見本（増やすときはこれを複製）===== -->
+      <a class="card" href="template-product.html">
+        <img src="images/photo.jpg" alt="作物の名前">
+        <div class="card-body">
+          <span class="tag">タグ</span>
+          <h3>作物の名前</h3>
+          <p>ひとことアピール（20文字くらい）</p>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <!-- ▼ 下の帯（全ページ共通）✏️ 学校名・年などを入れよう -->
+  <footer class="site-footer">
+    © 2026 ○○農業高校 ／ 農業情報活用の授業で作りました
+  </footer>
+
 </body>
 </html>
